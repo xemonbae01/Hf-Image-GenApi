@@ -92,8 +92,8 @@ async function queryWithRetries(prompt, modelEndpoint, modelName, seed, retries 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const API_KEY = "redwan";
-
+const API_KEY = "redwan"; // thought we do need some security or some mf will spam use it
+// add as much as models you want from the available inference api and it uses a round robin loop so it won't fail catching the models one by one =>
 const availableModels = {
   flux: "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev",
   "stable-diffusion": "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-3-medium-diffusers",
